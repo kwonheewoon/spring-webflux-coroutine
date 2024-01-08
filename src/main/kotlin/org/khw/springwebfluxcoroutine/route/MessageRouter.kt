@@ -11,6 +11,7 @@ class MessageRouter{
     fun personRoutes(handler: MessageHandler) = coRouter {
         "/messages".nest {
             GET("", handler::findAllMessage)
+            POST("", handler::saveMessage)
         }
     }
 }

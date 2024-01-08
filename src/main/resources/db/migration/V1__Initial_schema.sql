@@ -1,16 +1,18 @@
--- DROP TABLE IF EXISTS test.messages;
--- DROP SEQUENCE IF EXISTS test.messages_id_seq;
+DROP TABLE IF EXISTS test.messages;
+DROP SEQUENCE IF EXISTS test.messages_id_seq;
 
 CREATE SEQUENCE IF NOT EXISTS test.messages_id_seq
     INCREMENT 1
     START 1
     MINVALUE 1
     MAXVALUE 9223372036854775807
-    CACHE 1
-    OWNED BY messages.id;
+    CACHE 1;
 
 ALTER SEQUENCE test.messages_id_seq
     OWNER TO postgres;
+
+
+
 
 CREATE TABLE IF NOT EXISTS test.messages
 (
@@ -23,6 +25,3 @@ CREATE TABLE IF NOT EXISTS test.messages
 
 ALTER TABLE IF EXISTS test.messages
     OWNER to postgres;
-
-
-
