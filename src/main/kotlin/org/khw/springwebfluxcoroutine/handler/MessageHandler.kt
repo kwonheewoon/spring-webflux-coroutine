@@ -4,6 +4,7 @@ import kotlinx.coroutines.flow.toList
 import kotlinx.coroutines.reactor.awaitSingle
 import lombok.RequiredArgsConstructor
 import org.khw.springwebfluxcoroutine.domain.dto.MessageSaveApiDto
+import org.khw.springwebfluxcoroutine.domain.dto.MessageUpdateApiDto
 import org.khw.springwebfluxcoroutine.domain.mapper.MessageMapper
 import org.khw.springwebfluxcoroutine.service.MessageService
 import org.springframework.stereotype.Component
@@ -21,6 +22,15 @@ class MessageHandler(val messageService: MessageService) {
         return ServerResponse.ok().bodyValueAndAwait(
             messageService.saveMessage(
                 request.bodyToMono(MessageSaveApiDto::class.java).awaitSingle()
+            )
+        )
+    }
+
+    suspend fun updateMessage(request: ServerRequest): ServerResponse{
+        return ServerResponse.ok().bodyValueAndAwait(
+            messageService.updateMessage(
+                request.pathVariable("messageId").toLong()
+                ,request.bodyToMono(MessageUpdateApiDto::class.java).awaitSingle()
             )
         )
     }

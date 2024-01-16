@@ -12,6 +12,7 @@ class MessageRouter{
         "/messages".nest {
             GET("", handler::findAllMessage)
             POST("", handler::saveMessage)
+            PUT("/{messageId}", handler::updateMessage)
         }
     }
 }
