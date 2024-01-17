@@ -31,6 +31,8 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
     implementation("org.springframework:spring-jdbc")
 
+    implementation("io.netty:netty-resolver-dns-native-macos:4.1.68.Final:osx-aarch_64")
+
     // lombok
     compileOnly("org.projectlombok:lombok:1.18.30")
     annotationProcessor("org.projectlombok:lombok:1.18.30")

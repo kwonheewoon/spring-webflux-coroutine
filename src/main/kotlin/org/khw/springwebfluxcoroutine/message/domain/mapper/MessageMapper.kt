@@ -1,7 +1,7 @@
-package org.khw.springwebfluxcoroutine.domain.mapper
+package org.khw.springwebfluxcoroutine.message.domain.mapper
 
-import org.khw.springwebfluxcoroutine.domain.dto.MessageViewApiDto
-import org.khw.springwebfluxcoroutine.domain.entity.Message
+import org.khw.springwebfluxcoroutine.message.domain.dto.MessageViewApiDto
+import org.khw.springwebfluxcoroutine.message.domain.entity.Message
 import org.mapstruct.Mapper
 
 @Mapper(componentModel = "spring")

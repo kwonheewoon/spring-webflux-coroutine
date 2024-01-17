@@ -1,12 +1,10 @@
-package org.khw.springwebfluxcoroutine.handler
+package org.khw.springwebfluxcoroutine.message.handler
 
-import kotlinx.coroutines.flow.toList
 import kotlinx.coroutines.reactor.awaitSingle
 import lombok.RequiredArgsConstructor
-import org.khw.springwebfluxcoroutine.domain.dto.MessageSaveApiDto
-import org.khw.springwebfluxcoroutine.domain.dto.MessageUpdateApiDto
-import org.khw.springwebfluxcoroutine.domain.mapper.MessageMapper
-import org.khw.springwebfluxcoroutine.service.MessageService
+import org.khw.springwebfluxcoroutine.message.domain.dto.MessageSaveApiDto
+import org.khw.springwebfluxcoroutine.message.domain.dto.MessageUpdateApiDto
+import org.khw.springwebfluxcoroutine.message.service.MessageService
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.*
 

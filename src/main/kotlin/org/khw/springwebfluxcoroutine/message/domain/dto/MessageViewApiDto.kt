@@ -1,3 +1,3 @@
-package org.khw.springwebfluxcoroutine.domain.dto
+package org.khw.springwebfluxcoroutine.message.domain.dto
 
 data class MessageViewApiDto(val id: Long, val text: String)

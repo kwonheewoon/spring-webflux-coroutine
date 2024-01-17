@@ -1,0 +1,1 @@
+package org.khw.springwebfluxcoroutine.blog.domain.dtodata class NaverBlogSearchResponse(    val items: List<Item>)data class Item(    val title: String,    val description: String,    val link: String,    val bloggername: String,    val postdate: String)

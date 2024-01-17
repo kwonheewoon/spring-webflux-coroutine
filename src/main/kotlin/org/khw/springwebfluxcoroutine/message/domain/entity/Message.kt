@@ -1,6 +1,6 @@
-package org.khw.springwebfluxcoroutine.domain.entity
+package org.khw.springwebfluxcoroutine.message.domain.entity
 
-import org.khw.springwebfluxcoroutine.domain.dto.MessageUpdateApiDto
+import org.khw.springwebfluxcoroutine.message.domain.dto.MessageUpdateApiDto
 import org.springframework.data.annotation.Id
 import org.springframework.data.relational.core.mapping.Table
 
