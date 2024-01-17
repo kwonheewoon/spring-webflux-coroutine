@@ -1,5 +1,8 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
+val mapstruct_version: String by project
+val r2dbc_postgresql: String by project
+
 plugins {
     id("org.springframework.boot") version "3.2.1"
     id("io.spring.dependency-management") version "1.1.4"
@@ -21,7 +24,7 @@ repositories {
 
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter-data-r2dbc")
-    implementation("io.r2dbc:r2dbc-postgresql:0.8.13.RELEASE")
+    implementation("io.r2dbc:r2dbc-postgresql:$r2dbc_postgresql")
     implementation("org.springframework.boot:spring-boot-starter-webflux")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("io.projectreactor.kotlin:reactor-kotlin-extensions")
@@ -38,8 +41,8 @@ dependencies {
     annotationProcessor("org.projectlombok:lombok:1.18.30")
 
     // mapstruct
-    implementation("org.mapstruct:mapstruct:1.5.5.Final")
-    kapt("org.mapstruct:mapstruct-processor:1.5.5.Final")
+    implementation("org.mapstruct:mapstruct:$mapstruct_version")
+    kapt("org.mapstruct:mapstruct-processor:$mapstruct_version")
     //testAnnotationProcessor("org.mapstruct:mapstruct-processor:1.5.5.Final")
 
     testCompileOnly("org.projectlombok:lombok:1.18.30")
